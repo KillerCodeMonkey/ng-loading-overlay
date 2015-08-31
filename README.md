@@ -1,14 +1,12 @@
 # ng-loading-overlay
 ng-loading-overlay is an [Angular.js](http://angularjs.org/) module to show customizable loading overlay.
 
-Installation
-============
+## Installation
 - run `bower install ng-loading-overlay`
 - or `npm install ng-loading-overlay`
 - or download zip from release page: https://github.com/KillerCodeMonkey/ng-loading-overlay/releases
 
-Usage
-=====
+## Usage
 - load angular, ng-loading-overlay scripts in your index.html
 - add dependency to your app module `var myAppModule = angular.module('loadingTest', ['ngLoadingOverlay']);`
 - after that you can configure over $loadingOverlayConfigProvider and show/hide overlay with $loadingOverlay

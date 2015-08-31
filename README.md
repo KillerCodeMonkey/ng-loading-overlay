@@ -13,21 +13,18 @@ ng-loading-overlay is an [Angular.js](http://angularjs.org/) module to show cust
 - you can call show it multiple times --> a counter gets increased --> you need to call hide as many times you call show!
 - the best --> you can use it to show only a backdrop or show something like a centered content
 
-Configuration with $loadingOverlayConfigProvider
-================================================
+## Configuration with $loadingOverlayConfigProvider
 - configure via defaultConfig(templateString, backgroundStyle, textColor)-Function
 - templateString: a html string (default: `<b>Please wait</b>`)
 - backgroundStyle: a css value for background-property (default: `rgba(0, 0, 0, 0.5)`)
 - textColor: a css value for color-property (default: `#fff`)
 
-Get Default with $loadingOverlayConfig
-======================================
+## Get Default with $loadingOverlayConfig
 - a provider you can inject in your app components
 - $loadingOverlayConfig.get():
   - return defaultConfig object
 
-Show and hide with $loadingOverlay
-==================================
+## Show and hide with $loadingOverlay
 - a service you can inject in your app components
 - provides show()- and hide()-functions
 - $loadingOverlay.show(templateString, backgroundStyle, textColor):
@@ -37,6 +34,5 @@ Show and hide with $loadingOverlay
   - decrease open layers counter by 1
   - hides overlay if counter gets 0
 
- Additional
- ==========
+ ## Additional
  - the overlay has the id `ng-loading-overlay` so you can animate ng-show and ng-hide

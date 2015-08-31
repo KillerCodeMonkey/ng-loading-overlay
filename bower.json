@@ -1,0 +1,29 @@
+{
+  "name": "ng-loading-overlay",
+  "version": "1.0.0",
+  "main": ["src/ng-loading-overlay.min.js"],
+  "description": "AngularJS module to show customizable loading overlay",
+  "authors": [
+    "Bengt Weiße <bengtler@gmail.com>"
+  ],
+  "ignore": [
+    "bower_components",
+    "node_modules",
+    "spec",
+    "demo.html",
+    "package.json",
+    "Gruntfile.js"
+  ],
+  "dependencies": {
+    "angular": "~1.4.4"
+  },
+  "keywords": [
+    "loading",
+    "loading spinner",
+    "overlay",
+    "angularjs",
+    "angular",
+    "module"
+  ],
+  "license": "MIT"
+}

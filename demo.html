@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>LoadingOverlay Test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta charset="utf-8">
+
+        <!-- Scripts -->
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="src/ng-loading-overlay.min.js"></script>
+        <script>
+            // declare a module and load overlay module
+            var myAppModule = angular.module('loadingTest', ['ngLoadingOverlay']);
+            myAppModule.config([
+                '$loadingOverlayConfigProvider',
+                function ($loadingOverlayConfigProvider) {
+                    // set own defaults
+                    $loadingOverlayConfigProvider.defaultConfig('Processing ...', 'rgba(255, 0, 255, 0.3)', '#000');
+                }
+            ]);
+            myAppModule.controller('AppCtrl', [
+                '$scope',
+                '$loadingOverlay',
+                '$timeout',
+                function ($scope, $loadingOverlay, $timeout) {
+                    $scope.showLoading = function (duration, template) {
+                        $loadingOverlay.show(template);
+                        $timeout(function () {
+                            $loadingOverlay.hide();
+                        }, duration);
+                    };
+                    $scope.stack = function () {
+                        // show layer
+                        $loadingOverlay.show('first Overlay', 'rgba(0, 0, 0, 0.7)', '#fff');
+                        $timeout(function () {
+                            // open new --> changes the current one
+                            $loadingOverlay.show('second Overlay');
+                            $timeout(function () {
+                                // hide first time
+                                $loadingOverlay.hide();
+                                $timeout(function () {
+                                    // After last hide is called --> overlay gets closed
+                                    $loadingOverlay.hide();
+                                }, 2000);
+                            }, 2000);
+                        }, 2000);
+                    };
+                }
+            ]);
+        </script>
+
+    <body ng-app="loadingTest" ng-controller="AppCtrl">
+        <button ng-click="showLoading(2000)">Show 2sec</button>
+        <button ng-click="showLoading(2000, '<i>Oh, sorry...</i>')">Show Custom Template</button>
+        <button ng-click="stack()">Stack two overlays</button>
+    </body>
+</html>

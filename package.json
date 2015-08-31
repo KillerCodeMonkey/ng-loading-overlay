@@ -1,0 +1,34 @@
+{
+  "name": "ng-loading-overlay",
+  "version": "1.0.0",
+  "description": "AngularJS module to show customizable loading overlay",
+  "author": "Bengt Weiße <bengtler@gmail.com>",
+  "homepage": "https://github.com/KillerCodeMonkey/ng-loading-overlay",
+  "main": "src/ng-loading-overlay.min.js",
+  "devDependencies": {
+    "grunt": "~0.4.3",
+    "grunt-contrib-uglify": "~0.6.0"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+    "angular": "~1.4.4"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KillerCodeMonkey/ng-loading-overlay"
+  },
+  "bugs": {
+    "url": "https://github.com/KillerCodeMonkey/ng-loading-overlay/issues"
+  },
+  "keywords": [
+    "loading",
+    "loading spinner",
+    "overlay",
+    "angularjs",
+    "angular",
+    "module"
+  ]
+}

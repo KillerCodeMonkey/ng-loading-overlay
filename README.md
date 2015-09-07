@@ -36,3 +36,7 @@ ng-loading-overlay is an [Angular.js](http://angularjs.org/) module to show cust
 
  ## Additional
  - the overlay has the id `ng-loading-overlay` so you can animate ng-show and ng-hide
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/KillerCodeMonkey/ng-loading-overlay/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

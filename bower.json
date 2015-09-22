@@ -1,6 +1,6 @@
 {
   "name": "ng-loading-overlay",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": ["src/ng-loading-overlay.min.js"],
   "description": "AngularJS module to show customizable loading overlay",
   "authors": [

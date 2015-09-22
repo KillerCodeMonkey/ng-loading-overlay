@@ -8,14 +8,16 @@
         var defaults = {
             bg: 'rgba(0, 0, 0, 0.5)',
             textColor: '#fff',
-            template: '<b>Please wait</b>'
+            template: '<b>Please wait</b>',
+            zIndex: 9999
         };
 
         // available in config-block of the module
-        this.defaultConfig = function (templateString, bg, textColor) {
+        this.defaultConfig = function (templateString, bg, textColor, zIndex) {
             defaults.bg = bg || defaults.bg;
             defaults.template = templateString || defaults.template;
             defaults.textColor = textColor || defaults.textColor;
+            defaults.zIndex = zIndex || defaults.zIndex;
         };
         // allow to get functions
         this.$get = function () {
@@ -33,7 +35,7 @@
         '$sce',
         '$loadingOverlayConfig',
         function ($compile, $rootScope, $sce, $loadingOverlayConfig) {
-            var TEMPLATE_STRING = '<div id="ng-loading-overlay" ng-show="show" style="display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; align-items: center; justify-content: center; position:absolute; left:0; height: 100%; width: 100%; z-index: 999;" ng-style="{\'background\': bg, \'color\': textColor, \'top\': positionTop}"><div style="position:relative;opacity: 1;" ng-bind-html="template"></div></div>',
+            var TEMPLATE_STRING = '<div id="ng-loading-overlay" ng-show="show" style="display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; align-items: center; justify-content: center; position:absolute; left:0; height: 100%; width: 100%;" ng-style="{\'background\': bg, \'color\': textColor, \'top\': positionTop, \'z-index\': zIndex}"><div style="position:relative;opacity: 1;" ng-bind-html="template"></div></div>',
                 counter = 0,
                 defaults = $loadingOverlayConfig.get(),
                 element = angular.element(TEMPLATE_STRING),
@@ -46,7 +48,7 @@
                 angular.element(document.body).append(element);
             });
             // show function --> allows to overwrite defaults per show
-            this.show = function (templateString, bg, textColor) {
+            this.show = function (templateString, bg, textColor, zIndex) {
                 var body = angular.element(document.body);
 
                 // increase counter
@@ -68,6 +70,7 @@
                 } else {
                     scope.textColor = defaults.textColor;
                 }
+                scope.zIndex = zIndex || defaults.zIndex;
                 scope.positionTop = document.body.scrollTop;
                 // disable body scrolling
                 body.css('overflow', 'hidden');

@@ -18,6 +18,7 @@ ng-loading-overlay is an [Angular.js](http://angularjs.org/) module to show cust
 - templateString: a html string (default: `<b>Please wait</b>`)
 - backgroundStyle: a css value for background-property (default: `rgba(0, 0, 0, 0.5)`)
 - textColor: a css value for color-property (default: `#fff`)
+- zIndex: a css value for z-index (default: `9999`)
 
 ## Get Default with $loadingOverlayConfig
 - a provider you can inject in your app components

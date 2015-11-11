@@ -71,7 +71,7 @@
                     scope.textColor = defaults.textColor;
                 }
                 scope.zIndex = zIndex || defaults.zIndex;
-                scope.positionTop = window.scrollTop;
+                scope.positionTop = window.pageYOffset;
                 // disable body scrolling
                 body.css('overflow', 'hidden');
                 scope.show = true;

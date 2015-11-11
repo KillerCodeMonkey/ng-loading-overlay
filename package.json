@@ -1,6 +1,6 @@
 {
   "name": "ng-loading-overlay",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "AngularJS module to show customizable loading overlay",
   "author": "Bengt Weiße <bengtler@gmail.com>",
   "homepage": "https://github.com/KillerCodeMonkey/ng-loading-overlay",
@@ -13,7 +13,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
-    "angular": "~1.4.4"
+    "angular": "~1.4.7"
   },
   "license": "MIT",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "ng-loading-overlay",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": ["src/ng-loading-overlay.min.js"],
   "description": "AngularJS module to show customizable loading overlay",
   "authors": [
@@ -15,7 +15,7 @@
     "Gruntfile.js"
   ],
   "dependencies": {
-    "angular": "~1.4.4"
+    "angular": "~1.4.7"
   },
   "keywords": [
     "loading",
